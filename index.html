@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="title">Data e Hora</title>
+    <style>
+        body {
+            font: normal 16pt arial;
+            background-color: rgb(12, 12, 12);
+            color: rgb(218, 218, 218);
+        }
+
+        .background-hora {
+            width: 15em;
+            height: 3em;
+            border-radius: 50px;
+            background-color: rgb(26, 26, 26);
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="background-hora">
+            <h1 id="hora"></h1>
+        </div>
+        
+                    
+        </h1>
+        
+        <div id="data">Data aqui</div>
+        <div id="msg"></div>
+        
+        <script>
+
+            const sleep = (milliseconds) => {
+                return new Promise(resolve => setTimeout(resolve, milliseconds))
+            }
+
+            const atualizando = async() => {
+                
+                while (true) {
+                    const day = new Date().getDate()
+                    const month = new Date().getMonth()
+                    const year = new Date().getFullYear()
+                    const hora_atual = new Date().getHours()
+
+                    const hour = new Date().toLocaleTimeString()
+                    var titulo = window.document.getElementById('title')
+                    var hora = window.document.getElementById('hora')
+                    var data = window.document.getElementById('data')
+
+                    hora.innerHTML = hour
+                    titulo.innerHTML = hour + ' - Hora exata'
+
+                    data.innerHTML = `${day}/${month + 1}/${year}`
+                    await sleep(1000)
+
+                    if (hora_atual > 17 ) {
+                        var msg = window.document.getElementById('msg')
+                        msg.innerHTML = 'Tenha uma boa noite!'
+                    }
+                    if (hora_atual < 17 && hora_atual > 12) {
+                        var msg = window.document.getElementById('msg')
+                        msg.innerHTML = 'Tenha uma boa tarde!'
+                    }
+
+                    if (hora_atual < 12 ) {
+                        msg.innerHTML = 'Tenha uma bom dia!'
+                    }
+
+                }
+
+            }
+            atualizando()
+            
+        </script>
+    </div>
+    
+</body>
+</html>
+
