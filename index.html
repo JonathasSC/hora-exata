@@ -4,30 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet" type="text/css">
     <title id="title">Data e Hora</title>
-    <style>
-        body {
-            font: normal 16pt arial;
-            background-color: rgb(12, 12, 12);
-            color: rgb(218, 218, 218);
-        }
 
-        .background-hora {
-            width: 15em;
-            height: 3em;
-            border-radius: 50px;
-            background-color: rgb(26, 26, 26);
-        }
-        
-    </style>
 </head>
 <body>
     <div class="container">
-        <div class="background-hora">
-            <h1 id="hora"></h1>
-        </div>
         
         <div id="data">Data aqui</div>
+        
+        <div class="div-hora">
+            <h1 id="hora"></h1>
+        </div>
         <div id="msg"></div>
         
         <script>
@@ -59,7 +47,7 @@
                         var msg = window.document.getElementById('msg')
                         msg.innerHTML = 'Tenha uma boa noite!'
                     }
-                    if (hora_atual < 17 && hora_atual > 12) {
+                    if (hora_atual < 17 && hora_atual >= 12) {
                         var msg = window.document.getElementById('msg')
                         msg.innerHTML = 'Tenha uma boa tarde!'
                     }
