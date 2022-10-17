@@ -10,56 +10,74 @@
 </head>
 <body>
     <div class="container">
-        
-        <div id="data">Data aqui</div>
-        <h1 id="hora"></h1>
-        <div id="msg"></div>
-        
-        <script>
+        <main>
+            <section class="conteudo">
+                <section id="data">
+                    <div id="data">Data aqui</div>
+                </section>
+                                
 
-            const sleep = (milliseconds) => {
-                return new Promise(resolve => setTimeout(resolve, milliseconds))
-            }
+                <section id="horario">
+                    <div class="div-hora">
+                        <h1 class="hora" id="hora"></h1>
+                        <div class="background-hora"></div>
+                    </div>
+                </section>
 
-            const atualizando = async() => {
-                
-                while (true) {
-                    const day = new Date().getDate()
-                    const month = new Date().getMonth()
-                    const year = new Date().getFullYear()
-                    const hora_atual = new Date().getHours()
+                <section id="message">
+                    <div id="msg"></div>
+                </section>
+            </section>
+            
+            
+            
+            <script>
 
-                    const hour = new Date().toLocaleTimeString()
-                    var titulo = window.document.getElementById('title')
-                    var hora = window.document.getElementById('hora')
-                    var data = window.document.getElementById('data')
+                const sleep = (milliseconds) => {
+                    return new Promise(resolve => setTimeout(resolve, milliseconds))
+                }
 
-                    hora.innerHTML = hour
-                    titulo.innerHTML = hour + ' - Hora exata'
+                const atualizando = async() => {
+                    
+                    while (true) {
+                        const day = new Date().getDate()
+                        const month = new Date().getMonth()
+                        const year = new Date().getFullYear()
+                        const hora_atual = new Date().getHours()
 
-                    data.innerHTML = `${day}/${month + 1}/${year}`
-                    await sleep(1000)
+                        const hour = new Date().toLocaleTimeString()
+                        var titulo = window.document.getElementById('title')
+                        var hora = window.document.getElementById('hora')
+                        var data = window.document.getElementById('data')
 
-                    if (hora_atual > 17 ) {
-                        var msg = window.document.getElementById('msg')
-                        msg.innerHTML = 'Tenha uma boa noite!'
-                    }
-                    if (hora_atual < 17 && hora_atual >= 12) {
-                        var msg = window.document.getElementById('msg')
-                        msg.innerHTML = 'Tenha uma boa tarde!'
-                    }
+                        hora.innerHTML = hour
+                        titulo.innerHTML = hour + ' - Hora exata'
 
-                    if (hora_atual < 12 ) {
-                        msg.innerHTML = 'Tenha uma bom dia!'
+                        data.innerHTML = `${day}/${month + 1}/${year}`
+                        await sleep(1000)
+
+                        if (hora_atual > 17 ) {
+                            var msg = window.document.getElementById('msg')
+                            msg.innerHTML = 'Tenha uma boa noite!'
+                        }
+                        if (hora_atual < 17 && hora_atual >= 12) {
+                            var msg = window.document.getElementById('msg')
+                            msg.innerHTML = 'Tenha uma boa tarde!'
+                        }
+
+                        if (hora_atual < 12 ) {
+                            msg.innerHTML = 'Tenha uma bom dia!'
+                        }
+
                     }
 
                 }
-
-            }
-            atualizando()
-            
-        </script>
-    </div>
+                atualizando()
+                    
+                </script>
+            </div>
+        </main>
+        
     
 </body>
 </html>
