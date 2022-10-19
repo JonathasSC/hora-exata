@@ -40,62 +40,29 @@ body {
 
 * {
     text-align: center;
-    margin: 20px;
 }
 
 #msg {
     font: normal 22pt arial;
 }
 
-.darkmode {
-    width: 60px;
-    height: 60px;
-    border: none;
-    outline: none;
-    color: #fff;
-    background: #111;
+.switch {
+    
+    position: absolute;
+    margin-left: -49% ;
+    margin-top: 1%;
+
+}
+
+.switch + label {
+    display: block;
+    position: relative;
     cursor: pointer;
-    position: fixed;
-    z-index: 0;
-    border-radius: 10px;
+    outline: none;
+    user-select: none;
 }
 
-.darkmode:before {
-    content: '';
-    background: linear-gradient(45deg, #40c9ff, #e81cff, #40c9ff );
-    position: absolute;
-    top: -2px;
-    left:-2px;
-    background-size: 400%;
-    z-index: -1;
-    filter: blur(5px);
-    width: calc(100% + 4px);
-    height: calc(100% + 4px);
-    opacity: 0;
-    transition: opacity .3s ease-in-out;
-    border-radius: 10px;
-}
-
-.darkmode:active {
-    color: #000
-}
-
-.darkmode:active:after {
-    background: transparent;
-}
-
-.darkmode:hover:before {
-    opacity: 1;
-}
-
-.darkmode:after {
-    z-index: -1;
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: #111;
-    left: 0;
-    top: 0;
-    border-radius: 10px;
+.switch--shadow + label {
+    padding: 2px;
+    width: 120px;
 }
