@@ -13,10 +13,10 @@
 
     <div class="container">
         <main>
-            <section class="switch_container">
-                <input type="checkbox" class="switch switch--shadow" onclick="whitemode()" id="switch-shadow"/>
-                <label for="switch-shadow"></label>
-            </section>
+            <label class="container_checkbox">
+                <input type="checkbox" checked="checked">
+                <span class="checkmark"></span>
+              </label>
             
             <div id="exemplo"></div>
 
@@ -26,11 +26,9 @@
                 </section>
                                 
 
-                <section id="horario">
-                    <div class="div-hora">
-                        <h1 class="hora" id="hora"></h1>
-                        <div class="background-hora"></div>
-                    </div>
+                <section id="horario" class="horario">
+                    <p class="hora" id="hora"></p>
+                    <div class="background-hora"></div>
                 </section>
 
                 <section id="message">
@@ -49,10 +47,12 @@
                 const atualizando = async() => {
                     
                     while (true) {
-                        const day = new Date().getDate()
-                        const month = new Date().getMonth()
-                        const year = new Date().getFullYear()
-                        const hora_atual = new Date().getHours()
+                        const day = new Date()
+                        const now = day.getDate()
+                        const dayweek = day.getDay()
+                        const month = day.getMonth()
+                        const year = day.getFullYear()
+                        const hora_atual = day.getHours()
 
                         const hour = new Date().toLocaleTimeString()
                         var titulo = window.document.getElementById('title')
@@ -62,8 +62,38 @@
                         hora.innerHTML = hour
                         titulo.innerHTML = hour + ' - Hora exata'
 
-                        data.innerHTML = `<strong>${day}/${month + 1}/${year}</strong>`
+                        switch (dayweek) {
+                            case 0 :
+                                data.innerHTML = `<strong>Domigo, ${now}/${month + 1}/${year}</strong>`
                         await sleep(1000)
+                            break
+                            case 1 :
+                                data.innerHTML = `<strong>Segunda-feira, ${now}/${month + 1}/${year}</strong>`
+                        await sleep(1000)
+                            break
+                            case 2 :
+                                data.innerHTML = `<strong>Terça-feira, ${now}/${month + 1}/${year}</strong>`
+                        await sleep(1000)
+                            break
+                            case 3 :
+                                data.innerHTML = `<strong>Quarta-feira, ${now}/${month + 1}/${year}</strong>`
+                        await sleep(1000)
+                            break
+                            case 4 :
+                                data.innerHTML = `<strong>Quinta-feira, ${now}/${month + 1}/${year}</strong>`
+                        await sleep(1000)
+                            break
+                            case 5 :
+                                data.innerHTML = `<strong>Sexta-feira, ${now}/${month + 1}/${year}</strong>`
+                        await sleep(1000)
+                            break
+                            case 6 :
+                                data.innerHTML = `<strong>Sabádo, ${now}/${month + 1}/${year}</strong>`
+                        await sleep(1000)
+                            break
+
+                        }
+                        
 
                         if (hora_atual > 17 ) {
                             var msg = window.document.getElementById('msg')
