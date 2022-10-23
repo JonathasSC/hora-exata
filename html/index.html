@@ -25,6 +25,10 @@
                 <div id="msg"></div>
             </section>
             
+
+            <div class="image">
+                <img src="/img/moon.png" class="astro" id="astro">
+            </div>
             <!-- Script javascript -->
             
             <script>
@@ -42,8 +46,9 @@
                         const month = day.getMonth()
                         const year = day.getFullYear()
                         const hora_atual = day.getHours()
-
                         const hour = new Date().toLocaleTimeString()
+
+                        var image = window.document.getElementById('astro')
                         var titulo = window.document.getElementById('title')
                         var hora = window.document.getElementById('hora')
                         var data = window.document.getElementById('data')
@@ -53,31 +58,31 @@
 
                         switch (dayweek) {
                             case 0 :
-                                data.innerHTML = `<strong>Domigo, ${now}/${month + 1}/${year}</strong>`
+                                data.innerHTML = `Domingo, ${now}/${month + 1}/${year}`
                         await sleep(1000)
                             break
                             case 1 :
-                                data.innerHTML = `<strong>Segunda-feira, ${now}/${month + 1}/${year}</strong>`
+                                data.innerHTML = `Segunda-feira, ${now}/${month + 1}/${year}`
                         await sleep(1000)
                             break
                             case 2 :
-                                data.innerHTML = `<strong>Terça-feira, ${now}/${month + 1}/${year}</strong>`
+                                data.innerHTML = `Terça-feira, ${now}/${month + 1}/${year}`
                         await sleep(1000)
                             break
                             case 3 :
-                                data.innerHTML = `<strong>Quarta-feira, ${now}/${month + 1}/${year}</strong>`
+                                data.innerHTML = `Quarta-feira, ${now}/${month + 1}/${year}`
                         await sleep(1000)
                             break
                             case 4 :
-                                data.innerHTML = `<strong>Quinta-feira, ${now}/${month + 1}/${year}</strong>`
+                                data.innerHTML = `Quinta-feira, ${now}/${month + 1}/${year}`
                         await sleep(1000)
                             break
                             case 5 :
-                                data.innerHTML = `<strong>Sexta-feira, ${now}/${month + 1}/${year}</strong>`
+                                data.innerHTML = `Sexta-feira, ${now}/${month + 1}/${year}`
                         await sleep(1000)
                             break
                             case 6 :
-                                data.innerHTML = `<strong>Sabádo, ${now}/${month + 1}/${year}</strong>`
+                                data.innerHTML = `Sabádo, ${now}/${month + 1}/${year}`
                         await sleep(1000)
                             break
 
@@ -86,15 +91,17 @@
 
                         if (hora_atual > 17 ) {
                             var msg = window.document.getElementById('msg')
-                            msg.innerHTML = '"Tenha uma boa noite!"'
+                            image.src = "/img/moon.png" 
+                            msg.innerHTML = 'Tenha uma boa noite!' 
                         }
                         if (hora_atual < 17 && hora_atual >= 12) {
                             var msg = window.document.getElementById('msg')
-                            msg.innerHTML = '"Tenha uma boa tarde!"'
+                            msg.innerHTML = 'Tenha uma boa tarde!'
                         }
 
                         if (hora_atual < 12 ) {
-                            msg.innerHTML = '"Tenha uma bom dia!"'
+                            msg.innerHTML = 'Tenha uma bom dia!'
+                            image.src = "/img/sun.png" 
                         }
 
                     }
