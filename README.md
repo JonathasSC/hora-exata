@@ -40,3 +40,20 @@ Os objetivos do site são:
 - Acertar o horário do seu relógio físico ou do sistema operacional
 - Facil vizualização a longa distancia, podendo fazer outras atividades longe do dispositivo.
 - Vizualizar hórario sem sair do navegador
+
+#### Funções
+
+Como dito nos dois tópicos acima, as funcionalidades são:
+
+- Mostrar hórario com atualização precisa;
+- Mostrar dia, mês e ano;
+- Mostrar hórario no título da página;
+- Mostrar mensagem de acordo com hórario;
+- Mostrar imagem de acordo com hórario;
+
+Adições para futuros updates:
+
+- Cronomêtro
+- Temporizador
+- Alarmes
+- Agenda 
