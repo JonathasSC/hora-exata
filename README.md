@@ -18,16 +18,25 @@ Dentro do documento index.html como citado anteriormente teremos onde ocorrerá 
 
 Veja abaixo:
 
-<img src="\ignore\print-1.png">
+<img src="C:\Users\PC\Documents\repositórios\hora-exata\ignore\print-1.png">
 
-<img src="\ignore\print-2.png">
+<img src="C:\Users\PC\Documents\repositórios\hora-exata\ignore\print-2.png">
 
 Umas das funcionalidades do site é atualizar o hórario e a data de forma certeira para que o rélogio não dependa de serviços externos ou API's para funcionar.
 
 Isso é feito com um sistema de repetição com pausa de 1 segundo, para atualizar todo o conteúdo mais importante, sendo esse o segredo para os segundos do rélogio passar sem problemas.
+O site tem uma função de mostrar o horário também em seu título, que funciona junto ao rélogio princípal.
 
 Vemos esse sistema de repetição apartir da linha 42
 
 Dentro dessa repetição existe três estruturas de condições, onde se o horário for menor que 12:00, será mostrado uma mensagem de "Bom dia", se o horário for menor que 17:00 e maior que 12:00 mostrará uma mensagem de boa tarde, e caso seja maior que 17:00 será mostrará uma mensagem de "boa noite".
 
 podemos ver isso apartir da linha 90 até 103.
+
+#### Objetivos
+
+Os objetivos do site são:
+
+- Acertar o horário do seu relógio físico ou do sistema operacional
+- Facil vizualização a longa distancia, podendo fazer outras atividades longe do dispositivo.
+- Vizualizar hórario sem sair do navegador
