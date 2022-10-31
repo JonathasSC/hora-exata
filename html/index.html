@@ -31,13 +31,11 @@
             <!-- Script javascript -->
             
             <script>
-
                 const sleep = (milliseconds) => {
                     return new Promise(resolve => setTimeout(resolve, milliseconds))
                 }
 
-                const atualizando = async() => {
-                    
+                const atualizando = async() => {    
                     while (true) {
                         const day = new Date()
                         const now = day.getDate()
@@ -95,7 +93,6 @@
                             var msg = window.document.getElementById('msg')
                             msg.innerHTML = 'Tenha uma boa tarde!'
                         }
-
                         if (hora_atual < 12 ) {
                             msg.innerHTML = 'Tenha uma bom dia!'
                             image.src = "/img/sun.png" 
