@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="/styles/style.css" rel="stylesheet" type="text/css">
+    <link href="style.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates&display=swap">
     <title id="title">Data e Hora</title>
 </head>
@@ -26,7 +26,7 @@
             </section>
 
             <div class="image">
-                <img src="/img/moon.png" class="astro" id="astro">
+                <img src="imagens\moon.png" class="astro" id="astro">
             </div>
             <!-- Script javascript -->
             
@@ -86,7 +86,6 @@
                         
                         if (hora_atual > 17 ) {
                             var msg = window.document.getElementById('msg')
-                            image.src = "/img/moon.png" 
                             msg.innerHTML = 'Tenha uma boa noite!' 
                         }
                         if (hora_atual < 17 && hora_atual >= 12) {
@@ -95,7 +94,7 @@
                         }
                         if (hora_atual < 12 ) {
                             msg.innerHTML = 'Tenha uma bom dia!'
-                            image.src = "/img/sun.png" 
+                            image.src = "imagens\sun.png" 
                         }
 
                     }
