@@ -8,25 +8,21 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates&display=swap">
     <title id="title">Data e Hora</title>
 </head>
-<body>
+<body id="body">
+
 	<div class="header" id="header">
 		<a href="#default" id="logo" class="logo" >LOGO</a>
 
 		<div class="header-right">
 			<a class="active" href="#home">Home</a>
-			
-			<a href="#textinho">Sobre</a>
-
-			<a href="#fotos">Outros</a>
-
-			<input type="checkbox" id="darkmode-toggle" onclick="darkMode()"/>
-
-			<label for="darkmode-toggle">		
+			<a href="#textinho" for="conteudo">Sobre</a>
+			<a href="#fotos">Outros</a>		
 		</div>
 	</div>
-    <div class="container">
 
+    <div class="container">
 		<div class="cabeçalho">
+			<p style="color: #7a7a7a; text-align: center;">Alinhe o seu rélogio com a Hora Exata</p>
 			<p id="data" class="data">data-aqui</p>
 		</div>
 
@@ -43,7 +39,11 @@
 		<div class="image">
 			<img src="imagens\moon.png" class="astro" id="astro">
 		</div>
-    </div>   
+    </div>
+
+	<button onclick="ScrollTop()" id="ScrollButton" title="Top">Top ▲
+	</button>
+
 	<script src="script.js"></script> 
 </body>
 </html>

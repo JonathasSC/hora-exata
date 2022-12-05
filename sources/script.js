@@ -1,3 +1,5 @@
+// RELÓGIO
+
 const sleep = (milliseconds) => {
 	return new Promise(resolve => setTimeout(resolve, milliseconds))
 }
@@ -53,7 +55,8 @@ const atualizando = async() => {
 		
 		if (hora_atual > 17 ) {
 			var msg = window.document.getElementById('msg')
-			msg.innerHTML = 'Tenha uma boa noite!' 
+			msg.innerHTML = 'Tenha uma boa noite!'
+			image.src = "imagens\moon.png" 
 		}
 		if (hora_atual < 17 && hora_atual >= 12) {
 			var msg = window.document.getElementById('msg')
@@ -61,8 +64,28 @@ const atualizando = async() => {
 		}
 		if (hora_atual < 12 ) {
 			msg.innerHTML = 'Tenha uma bom dia!'
-			image.src = "imagens\sun.png" 
+			image.src = "imagens\sun.png"
 		}
 	}
 }
 atualizando() 
+
+
+// SCROLL TO TOP BUTTON 
+
+var ScrollToTop = document.getElementById('ScrollButton')
+
+window.onscroll = function() {scrollFuncion()}
+
+function scrollFuncion() {
+	if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20){
+		ScrollToTop.style.display = "block"
+	} else {
+		ScrollToTop.style.display = "none"
+	}
+}
+
+function ScrollTop() {
+	document.body.scrollTop = 0;
+	document.documentElement.scrollTop = 0;
+}
