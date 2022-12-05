@@ -7,7 +7,7 @@ body {
 
 
 .cabeçalho {
-	margin-top: 80px;
+	margin-top: 60px;
 }
 
 .data {
@@ -19,26 +19,38 @@ body {
 	margin-top: 100px;
 }
 
+#text {
+	height: 80px;
+	min-width: 100px;
+	max-width: 850px;
+	justify-content: center;
+	margin: auto;
+	color: #7a7a7a; 
+	text-align: center;
+	border-bottom: solid 1px rgb(63, 63, 63);
+}
+
 #hora {
-    font: bold 100pt arial;
+    font: bold 150pt arial;
+	background-color: #464646;
+	padding: 10px 30px;
+	border-radius: 25px;
 }
 
 .cabeçalho, .mensagem{
     text-align: center;
 }
 
-#mensagem {
+#msg {
     font: italic 22pt arial;
     padding: 30px;
+	text-align: center;
 }
 
-.seção {
-    background: #464646;
-    width: 28em;
-    height: 6em;
+section{
+    height: 10em;
     padding: 15px;
     margin: auto;
-    border-radius: 25px;
     justify-content: center;
     align-items: center;
     display: flex;
