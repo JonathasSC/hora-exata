@@ -1,59 +1,65 @@
-# Hora exata
-##### Horário pontual de forma direta e fácil.
 
+<div align="center">
 
-##### Topícos a seguir:
+# Hora Exata
 
-1. Como funciona
-2. Objetivos 
-3. Funções
+#### Projeto feito em CSS, HTML e JavaScript puros.
+</div>
 
-#### Como funciona:
+---
+### Dados do projeto:
 
-O site funciona de forma fácil, tendo foco o acesso rápido ao seu conteúdo principal, sendo esse o relógio e a data.
+![files](https://img.shields.io/github/directory-file-count/JonathasSC/hora-exata?color=%2350fa7b&label=ARQUIVOS&logoColor=%2350fa7b) ![size](https://img.shields.io/github/repo-size/JonathasSC/hora-exata?color=%23ff79c6&label=REPO%20TAMANHO)
 
-Já dentro de seus arquivos, temos um documento index.html onde terá também dentro dele uma seção de códigos feitos em javascript, um arquivo styles.css para estilização e duas imagens moon,png e sun.png usadas também para uma melhor estética, ambos estão nas pastas html,styles e img respectivamente.
+### Tecnolgias Utilizadas:
 
-Dentro do documento index.html como citado anteriormente teremos onde ocorrerá a parte funcional do site, o script feito em javascript dentro da própria tag script.
+![javascript](https://img.shields.io/badge/JAVASCRIPT-323330?&logo=javascript&logoColor=f0db4f&style=flat&logoWidth=30)
+![html5](https://img.shields.io/badge/HTML-e34c26?&logo=html5&logoColor=ffffff&style=flat&logoWidth=30)
+![css3](https://img.shields.io/badge/CSS3-2965f1?&logo=css3&logoColor=ffffff&style=flat&logoWidth=30)
 
-Veja abaixo:
+### Ferramentas Utilizadas:
 
-<img src="C:\Users\PC\Documents\repositórios\hora-exata\ignore\print-1.png">
+![vscode](https://img.shields.io/badge/VS%20CODE-0078d7?&logo=visualstudiocode&logoColor=white&style=flat&logoWidth=30)
 
-<img src="C:\Users\PC\Documents\repositórios\hora-exata\ignore\print-2.png">
+---
+### Detalhes:
+Iniciado no dia 16/10/22 e atualizado.
 
-Umas das funcionalidades do site é atualizar o hórario e a data de forma certeira para que o rélogio não dependa de serviços externos ou API's para funcionar.
+Projeto feito com conhecimentos adquiridos ao longo dos estudos das tecnologias usadas.
 
-Isso é feito com um sistema de repetição com pausa de 1 segundo, para atualizar todo o conteúdo mais importante, sendo esse o segredo para os segundos do rélogio passar sem problemas.
-O site tem uma função de mostrar o horário também em seu título, que funciona junto ao rélogio princípal.
+---
+## Aprendizado pessoal:
+Oportunidade de trabalhar com as tecnologias "puras" sem auxilio de frameworks ou bibliotecas.
 
-Vemos esse sistema de repetição apartir da linha 42
+---
+## Aprendizados Tecnicos:
+Esse projeto foi otimo para que eu pudesse treinar lógica de programação e posicionamento de elementos com css.
 
-Dentro dessa repetição existe três estruturas de condições, onde se o horário for menor que 12:00, será mostrado uma mensagem de "Bom dia", se o horário for menor que 17:00 e maior que 12:00 mostrará uma mensagem de boa tarde, e caso seja maior que 17:00 será mostrará uma mensagem de "boa noite".
+---
+## Visualizando:
 
-podemos ver isso apartir da linha 90 até 103.
+### Tela de entrada:
 
-#### Objetivos
+Ao abrir o site nos deparamos diretamente com o site e todas a sua proposta, mostrar informações do horário e data.
+&nbsp;
+     
+&nbsp;
+![menu](/ignore/screenshot-hora-exata.png)
 
-Os objetivos do site são:
+---
+#### Rolando a tela:
 
-- Acertar o horário do seu relógio físico ou do sistema operacional
-- Facil vizualização a longa distancia, podendo fazer outras atividades longe do dispositivo.
-- Vizualizar hórario sem sair do navegador
+Ao deslizar a tela, vemos uma imagem representativa que varia entre a lua (tarde & noite) ou sol (manhã), que muda dependendo do hórario.
 
-#### Funções
+É possivel ver também um botão no canto inferior direito, para pular a página para seu topo automaticamente.
+&nbsp;
+     
+&nbsp;
+![image2](/ignore/screenshot-hora-exata2.png)
 
-Como dito nos dois tópicos acima, as funcionalidades são:
-
-- Mostrar hórario com atualização precisa;
-- Mostrar dia, mês e ano;
-- Mostrar hórario no título da página;
-- Mostrar mensagem de acordo com hórario;
-- Mostrar imagem de acordo com hórario;
-
-Adições para futuros updates:
-
-- Cronomêtro
-- Temporizador
-- Alarmes
-- Agenda 
+---
+#### Planos para futuras atualizações:
+* Cronomêtro
+* Temporizador
+* Alarmes
+* Agenda 
