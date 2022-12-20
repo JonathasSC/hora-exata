@@ -56,15 +56,16 @@ const atualizando = async() => {
 		if (hora_atual > 17 ) {
 			var msg = window.document.getElementById('msg')
 			msg.innerHTML = 'Tenha uma boa noite!'
-			image.src = "imagens\moon.png" 
+			image.src = "/sources/imagens/moon.png"
 		}
 		if (hora_atual < 17 && hora_atual >= 12) {
 			var msg = window.document.getElementById('msg')
 			msg.innerHTML = 'Tenha uma boa tarde!'
+
 		}
 		if (hora_atual < 12 ) {
 			msg.innerHTML = 'Tenha uma bom dia!'
-			image.src = "imagens\sun.png"
+			image.src = "/sources/imagens/sun.png"
 		}
 	}
 }
